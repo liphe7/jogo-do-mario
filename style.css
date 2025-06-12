@@ -1,0 +1,76 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;    
+}
+
+.game-board{
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid rgb(35, 160, 35); /* na linha 10 esta o chão*/
+    margin: 0 auto;/* na linha 11 esta a margem */
+    position: relative;/*na linha 12 esta a posiçao */
+    overflow: hidden;/*linha 13 determinar o limite*/
+    background: linear-gradient(#5dcaf5,#e0f6ff);/* na linha 14 cor de fundo em degrade*/
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1s infinite linear;
+}
+
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;                                 
+}
+
+.jump {
+    animation: jump 500ms ease-out ;
+}
+
+.clouds {
+    position: absolute;
+    width: 550px;
+    animation: clouds-animation 10s infinite linear;
+}
+
+@keyframes pipe-animation {
+    from{
+     right: -80px;   
+    }
+
+    to  {
+      right: 100%;  
+    }    
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+    40%{
+        bottom: 180px;
+    }
+    50%{
+        bottom: 180px;
+    }
+    60%{
+        bottom: 180px;
+    }
+    100%{
+        bottom: 0;
+    }
+}   
+
+@keyframes clouds-animation {
+from {
+right: 0;
+}
+
+to{
+right:100% ;
+}
+}
